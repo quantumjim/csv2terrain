@@ -2,7 +2,7 @@
 
 This is a mod for [Minetest](https://github.com/minetest/). It has been designed to be used in conjunction with the `default` mod of the Minetest game.
 
-This mod reads in data from a local csv file, which should have lines of the form
+This mod reads in data from 'blocks.csv': a local csv file, in the same directory as 'init.lua'. This should have lines of the form
 
 `x,y,z,keyword,`
 
