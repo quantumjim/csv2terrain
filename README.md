@@ -20,14 +20,10 @@ diamondblock, goldblock, stone_with_coal, stone_with_iron, stone_with_copper, st
 fern_1, fern_2, fern_3, marram_grass_1, marram_grass_2, marram_grass_3
 ```
 
-The mod adds these blocks to their specified positions whenenever the command `/ltbv` is invoked. This stands for 'Let there be voxels!', to allow the player their moment of creation.
+The mod adds these blocks to their specified positions whenever the command `/ltbv` is invoked. This stands for 'Let there be voxels!', to allow the player their moment of creation.
 
 If there are weird gaps in terrain generated in this way, simply try invoking the command again to patch it up. If there are weird dark patches, it seems best to just try again with a new world.
 
 Note that keywords *min* and *max* also need to be present in the csv. The coordinates for these define the volume in which all the blocks reside.
 
-A csv generator is included within the mod, generates terrain using [Qiskit](https://qiskit.org). It needs to be run separately from the game, and runs using Python 3. Simply run the file 'island_generator.py' using a command such as
-
-```
-python3 island_generator.py
-```
+A csv generator is included within the mod, generates terrain using [Qiskit](https://qiskit.org). It needs to be run separately from the game, and runs using Python 3.

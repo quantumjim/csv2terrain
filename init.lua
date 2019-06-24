@@ -33,16 +33,9 @@ function csv2terrain ()
  	manip:set_data(data)
  	manip:write_to_map()
 	manip:update_map()
-  
-end
-
-minetest.register_chatcommand("ltbv", {
-	func = csv2terrain,
-})
-
-
-minetest.register_on_joinplayer(function(player) 
-    playername = player.get_player_name(player)
+	
+	local player = minetest.get_player_by_name("singleplayer")
+	playername = player.get_player_name(player)
 	local privs = minetest.get_player_privs(playername)
 	privs.fly = true
 	minetest.set_player_privs(playername, privs)
@@ -52,9 +45,13 @@ minetest.register_on_joinplayer(function(player)
 			xp, yp, zp = tonumber(x), tonumber(y), tonumber(z)
 			player:set_pos( {x=xp, y=yp, z=zp} )
 		end
-  	end        
-end)
+  	end     
+  
+end
 
 
+minetest.register_chatcommand("ltbv", {
+    func = csv2terrain,
+})
 
-
+minetest.clear_registered_biomes() 
