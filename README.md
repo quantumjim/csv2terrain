@@ -1,6 +1,8 @@
 ## csv2terrain
 
-This is a mod for [Minetest](https://github.com/minetest/). It has been designed to be used in conjunction with the `default` mod of the Minetest game. Details on how to install a Minetest mod are [here](https://dev.minetest.net/Installing_Mods).
+This is a mod for [Minetest](https://github.com/minetest/). It has been intended to be used as part of the standard [Minetest game](https://github.com/minetest/minetest_game). For best results, use in conjunction with the [flatgen mod](https://forum.minetest.net/viewtopic.php?id=8952).
+
+Details on how to install a Minetest mod are [here](https://dev.minetest.net/Installing_Mods).
 
 This mod reads in data from 'blocks.csv', a user provided csv file which should have lines of the form
 
