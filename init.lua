@@ -22,6 +22,7 @@ function csv2terrain ()
 
   	for line in io.lines(minetest.get_modpath("csv2terrain").."/blocks.csv")  do
     	local x, y, z, block = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),")
+	z = z1 - z + z0
         local j = area:index(tonumber(x), tonumber(y), tonumber(z))
    		if block=="air" then
      	 		data[j] = minetest.get_content_id (block)
@@ -41,6 +42,7 @@ function csv2terrain ()
 	minetest.set_player_privs(playername, privs)
 	for line in io.lines(minetest.get_modpath("csv2terrain").."/blocks.csv")  do
 		local x, y, z, block = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),")
+		z = z1 - z + z0
 		if block=="player" then
 			xp, yp, zp = tonumber(x), tonumber(y), tonumber(z)
 			player:set_pos( {x=xp, y=yp, z=zp} )
