@@ -2,7 +2,7 @@
 dependencies:
 - python==3.6
 - pip=18
-- matplotlib
+- matplotlib==2.2.3
 - notebook
 - ipywidgets
 - pip:
