@@ -1,5 +1,5 @@
 ## csv2terrain 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantumjim/csv2terrain/tree/master/master?filepath=island_generator_demo.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantumjim/csv2terrain/master?filepath=island_generator_demo.ipynb)
 
 This is a mod for [Minetest](https://github.com/minetest/). It has been intended to be used as part of the standard [Minetest game](https://github.com/minetest/minetest_game). For best results, use in conjunction with the [flatgen mod](https://forum.minetest.net/viewtopic.php?id=8952).
 
