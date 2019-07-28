@@ -1,9 +1,9 @@
-
 dependencies:
 - python==3.6
-- pip
-- matplotlib==2.2.3
+- pip=18
+- matplotlib
 - notebook
 - ipywidgets
 - pip:
   - qiskit
+  - pdflatex
