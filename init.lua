@@ -24,11 +24,13 @@ function csv2terrain ()
     	local x, y, z, block = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),")
 	z = z1 - z + z0
         local j = area:index(tonumber(x), tonumber(y), tonumber(z))
-   		if block=="air" then
+   		if block~="min" and block~="max" and block~="player" then
+		if block=="air" then
      	 		data[j] = minetest.get_content_id (block)
     		else
       			data[j] = minetest.get_content_id ("default:"..block)
   		end
+		end
  	 end
   
  	manip:set_data(data)
