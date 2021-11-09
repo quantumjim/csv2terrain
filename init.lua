@@ -25,11 +25,15 @@ function csv2terrain ()
 	z = z1 - z + z0
         local j = area:index(tonumber(x), tonumber(y), tonumber(z))
    		if block~="min" and block~="max" and block~="player" then
-		if block=="air" then
-     	 		data[j] = minetest.get_content_id (block)
-    		else
-      			data[j] = minetest.get_content_id ("default:"..block)
-  		end
+			if block=="air" then
+				data[j] = minetest.get_content_id (block)
+			elseif string.find(block, "stair_") or string.find(block, "slab_") then
+				data[j] = minetest.get_content_id ("stairs:"..block)
+			elseif block=="white" or block=="grey" or block=="dark_grey" or block=="black" or block=="blue" or block=="cyan" or block=="green" or block=="dark_green" or block=="yellow" or block=="orange" or block=="brown" or block=="red" or block=="pink" or block=="magenta" or block=="violet" then
+				data[j] = minetest.get_content_id ("wool:"..block)
+			else
+				data[j] = minetest.get_content_id ("default:"..block)
+			end
 		end
  	 end
   
